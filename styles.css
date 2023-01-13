@@ -90,6 +90,10 @@ h4{
     font-weight: 300;
 }
 
+.shapes{
+    border-radius: 0.6rem;
+}
+
 .flex{
     display: flex;
 }
@@ -98,10 +102,10 @@ h4{
 .main{
     padding: 5rem 1.5rem;
 }
-
+/*
 .main-grid > *{
     border: 1px solid white;
-}
+}*/
 
 .main-grid{
     display: grid;
@@ -116,6 +120,7 @@ h4{
 .card{
     width: auto;
     min-height: 10rem;
+    border-radius: 1rem;
 }
 
 @media only screen and (min-width: 600px){
@@ -315,3 +320,80 @@ h4::before{
 }
 
 /* ================================= */
+
+/* ========== cards ============= */
+
+
+            /*  work card */
+.work-report{
+    background-color: var(--work-light-orange);
+}
+
+.work-img-wrapper{
+    background-color: var(--work-light-orange);
+    height: 25%;
+}
+
+            /* play card */
+
+.play-report{
+    background-color: var(--play-light-blue);
+}
+
+.play-img-wrapper{
+    background-color: var(--play-light-blue);
+    height: 25%;
+}
+
+                /* study card */
+
+.study-report{
+    background-color: var(--study-light-pinkish);
+}
+
+.study-img-wrapper{
+    background-color: var(--study-light-pinkish);
+    height: 25%;
+}
+
+                /* exercise card */
+
+.exercise-report{
+    background-color: var(--exercise-light-green);
+}
+
+.exercise-img-wrapper{
+    background-color: var(--exercise-light-green);
+    height: 25%;
+}
+
+                /* social report */
+
+.social-report{
+    background-color: var(--social-light-purple);
+}
+
+.social-img-wrapper{
+    background-color: var(--social-light-purple);
+    height: 25%;
+}
+
+
+                /* self care report */
+
+.self-care-report{
+    background-color: var(--selfcare-light-yellow);
+}
+
+.self-care-img-wrapper{
+    background-color: var(--selfcare-light-yellow);
+    height: 25%;
+}
+
+                /* global info report card style */
+
+.info{
+    background-color: var(--dark-blue);
+    height: 75%;
+    border-radius: 0.6rem;
+}
