@@ -128,48 +128,46 @@ h4{
         padding: 5rem 5rem;
     }
 
-    .main-grid{
-        display: grid;
-        gap: 1.2rem;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 1fr);
-    }
-
     .profile{
-        grid-column: 1 / 3;
-        grid-row: 1 / 2;
+        grid-area: profile;
     }
 
     .work{
-        grid-column: 1 / 2;
-        grid-row: 2 / 3;
+        grid-area: work;
     }
 
     .play{
-        grid-column: 2 / 3;
-        grid-row: 2 / 3;
+        grid-area: play;
     }
 
     .study{
-        grid-column-gap: 1 / 2;
-        grid-row: 3 / 4;
+        grid-area: study;
     }
 
     .exercise{
-        grid-column: 2 / 3;
-        grid-row: 3 / 4;
+        grid-area: exercise;
     }
     
     .social{
-        grid-column: 1 / 2;
-        grid-row: 4 / 5;
+        grid-area: social;
     }
 
     .self-care{
-        grid-column: 2 / 3;
-        grid-row: 4 / 5;
+        grid-area: self;
     }
 
+    .main-grid{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4. 1fr);
+        grid-template-areas: 
+        "profile profile"
+        "work play"
+        "study exercise"
+        "social self"
+        ;
+    }
 }
 
 @media only screen and (min-width: 1024px){
@@ -177,47 +175,43 @@ h4{
         padding: 12rem 6em;
     }
 
+    .profile{
+        grid-area: profile;
+    }
+
+    .work{
+        grid-area: work;
+    }
+
+    .play{
+        grid-area: play;
+    }
+
+    .study{
+        grid-area: study;
+    }
+
+    .exercise{
+        grid-area: exercise;
+    }
+    
+    .social{
+        grid-area: social;
+    }
+
+    .self-care{
+        grid-area: self;
+    }
+
     .main-grid{
         display: grid;
         gap: 1rem;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2. 1fr);
-    }
-
-
-    .profile{
-        grid-column: 1 /2;
-        grid-row: 1 / 3;
-    }
-
-    .work{
-        grid-column: 2 / 3;
-        grid-row: 1 / 2;
-    }
-
-    .play{
-        grid-column: 3 / 4;
-        grid-row: 1 / 2;
-    }
-
-    .study{
-        grid-column: 4 / 5;
-        grid-row: 1 / 2;
-    }
-
-    .exercise{
-        grid-column: 2 / 3;
-        grid-row: 2 / 3;
-    }
-    
-    .social{
-        grid-column: 3 / 4;
-        grid-row: 2 / 3;
-    }
-
-    .self-care{
-        grid-column: 4 / 5;
-        grid-row: 2 / 3;
+        grid-template-areas: 
+        "profile work play study"
+        "profile exercise social self"
+        ;
     }
 
 }
@@ -392,8 +386,79 @@ h4::before{
 
                 /* global info report card style */
 
+.shapes{
+    flex-direction: row-reverse;
+}
+
+.shapes img{
+    padding-right: 0.3rem;
+}
+
 .info{
     background-color: var(--dark-blue);
     height: 75%;
     border-radius: 0.6rem;
+    padding: 1.25rem;
+}
+
+.info-title{
+    justify-content: space-between;
+}
+
+.info-title p{
+    font-size: 18px;
+    color: var(--white);
+}
+
+.info-title .fa-ellipsis{
+    color: var(--light-purple);
+}
+
+.info-description{
+    justify-content: space-between;
+    padding-top: 0.9rem;
+}
+
+.info-description h2{
+    font-weight: 300;
+}
+
+.info-description p{
+    align-self: flex-end;
+}
+
+@media only screen and (min-width: 600px) {
+    .info-description{
+        padding-top: 2rem;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .info-description p{
+        align-self: flex-start;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .info-description{
+        padding-top: 3rem;
+        flex-direction: row;
+        gap: 0;
+    }
+
+    .info-description p{
+        align-self: flex-end;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .info-description{
+        padding-top: 0.9rem;
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+
+    .info-description p{
+        align-self: flex-start;
+    }
 }
